@@ -14,7 +14,7 @@ class NotificationFactory {
         } else if (type === "sms") {
             return new SMSNotification();
         } else {
-            throw new Error(`Tipo de notificación desconocido: ${type}`);
+            throw new Error(`Tipo de notificación desconocida: ${type}`);
         }
     }
 }

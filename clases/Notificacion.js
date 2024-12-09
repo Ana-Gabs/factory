@@ -1,7 +1,7 @@
 //clase base
 class Notification {
     sendMessage(message) {
-        throw new Error("El método sendMessage debe ser implementado");
+        throw new Error("El metodo sendMessage debe ser implementado");
     }
 }
 

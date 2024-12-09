@@ -12,7 +12,7 @@ console.log("1. Correo electronico");
 console.log("2. SMS");
 
 function solicitarOpcion() {
-    rl.question('Ingresa el número de la opción (1 o 2): ', (opcion) => {
+    rl.question('Ingresa el numero de la opción (1 o 2): ', (opcion) => {
         let tipoNotificacion;
 
         if (opcion === '1') {
@@ -27,11 +27,11 @@ function solicitarOpcion() {
             } catch (error) {
                 console.error(`❌ Error: ${error.message}`);
             }
-            solicitarOpcion(); // volver a solicitar un nemero
+            solicitarOpcion(); // volver a solicitar un numero
             return;  
         }
 
-        // crea la notificación según la solicitud
+        // crea la notificación segun la solicitud
         try {
             const notification = NotificationFactory.createNotification(tipoNotificacion);
             notification.sendMessage(`Este es un mensaje de prueba para ${tipoNotificacion}.`);

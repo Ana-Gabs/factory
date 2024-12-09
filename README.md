@@ -1,5 +1,4 @@
 # Proyecto de Notificaciones con Factory Method en Node.js
-
 Este proyecto implementa el **patrón de diseño Factory Method** para crear y enviar notificacionespor medio de distintos medios como **correo electrónico** y **SMS**. El programa permite al usuario seleccionar el tipo de notificación que desea enviar, y si se elige una opción no valida, el sistema maneja el error adecuadamente.
 
 ## Estructura del Proyecto
@@ -30,7 +29,7 @@ Seleccione una opcion de notificación:
 1. Correo electronico
 2. SMS
 Ingresa el numero de la opción (1 o 2): 1
-📧 Enviando correo electrónico: Este es un mensaje de prueba para email.
+📧 Enviando correo electronico: Este es un mensaje de prueba para email.
 
 ## Flujo de Ejecución "2"
 ************** Patron Factory **************
@@ -49,7 +48,7 @@ Seleccione una opcion de notificación:
 Ingresa el numero de la opción (1 o 2): 3
 ❌ Error: Tipo de notificación desconocido: 3
 Ingresa el numero de la opción (1 o 2): 1
-📧 Enviando correo electrónico: Este es un mensaje de prueba para email.
+📧 Enviando correo electronico: Este es un mensaje de prueba para email.
 PS C:\Users\Gaby_Contreras\patrones\factory>
 
 ## Clases principales
@@ -59,6 +58,10 @@ PS C:\Users\Gaby_Contreras\patrones\factory>
 
 ## Metodos
 **NotificationFactory.createNotification(type):**
-1. Recibe como parámetro el tipo de notificación (email o sms).
+1. Recibe como parametro el tipo de notificación (email o sms).
 2. Devuelve una instancia de la clase EmailNotification o SMSNotification.
 3. Si el tipo no es válido, lanza un error.
+
+## Implentación de Factory
+Al ser un tipo de patron creacional que a travez de una interfaz crea objetos en una seperclase, mientras permite a las subclases alterar el tipo de objeto que se crean.
+En en caso especifico de este programa se requiere de crear objetos de diferentes tipos (notificaciones), por la logica de creación en una fabriba centralizada, lo que facilita la escalabidad en dado caso que se requiera de añadir un nuevo moduo al programa de los ya eexixtentes (EmailNotificación y SMSNotification) 
